@@ -407,7 +407,7 @@ namespace Gecode { namespace Int { namespace Linear {
       ExecStatus es = prop_bnd<Val,View,View>(this,home,x,y,c);
       if ((es == ES_SUBSUMED) || (es == ES_FAILED))
 	return es;
-      return ES_FIX_PARTIAL(View::pme(ME_INT_DOM));
+      return this->ES_FIX_PARTIAL(View::pme(ME_INT_DOM));
     }
 
     // Value of equation for partial assignment
